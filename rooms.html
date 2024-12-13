@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Exhibit Rooms</title>
+
+    <style>
+
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-image: linear-gradient(to left, #d4d6ce, #d3af80d2);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .header {
+        background-image: linear-gradient(to right, #424045, #a49bab);
+        color: rgb(248, 246, 246);
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
+        font-size: 40px;
+      }
+
+      .exhibit-rooms-container {
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        margin-top: 80px;
+        width: 80%;
+        justify-content: center;
+      }
+
+      .Room {
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        text-align: center;
+        width: 250px;
+        transition: transform 0.3s;
+      }
+
+      .Room:hover {
+        transform: translateY(-10px);
+      }
+
+      .Room img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .Room img:hover {
+        transform: scale(1.1);
+      }
+
+      h3 {
+        margin: 10px 0;
+        color: #445f7a;
+      }
+
+      p {
+        color: #000000;
+        font-size: 15px;
+        text-align: center;
+      }
+
+      .aa {
+        text-decoration: none;
+        color: #ae708f;
+        font-size: 1.2em;
+        margin-top: 30px;
+        padding: 10px 20px;
+        border: 2px solid #ae708f;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .aa:hover {
+        background-color: #ae708f;
+        color: #fff;
+      }
+
+      @media screen and (max-width: 600px) {
+        .gallery-container {
+          grid-template-columns: repeat(3, 1fr); /* الحفاظ على 3 أعمدة */
+          gap: 20px; /* تقليل الفجوات فقط */
+          padding-left: 20px;
+        }
+
+        .header {
+          font-size: 30px; /* تقليل حجم النص للرأس */
+          padding: 10px 0;
+        }
+
+        .one img {
+          height: 200px; /* تقليل ارتفاع الصور فقط */
+        }
+
+        h3 {
+          font-size: 1em; /* تقليل حجم النصوص داخل العناصر */
+        }
+
+        .aa {
+          font-size: 1em; /* تصغير النص داخل الزر */
+          width: 100px; /* ضبط عرض الزر */
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="header">Art Gallery</div>
+
+    <!-- Exhibit Rooms -->
+
+    <div class="exhibit-rooms-container">
+
+      <div class="Room">
+        <a href="C:\Users\Bashaer\Desktop\basha.html\room1.jpg">
+          <img src="room1.jpg" alt="Room 1" />
+        </a>
+        <h3>Room 1</h3>
+        <p>A room showcasing contemporary abstract art.</p>
+      </div>
+
+      <div class="Room">
+        <a href="C:\Users\Bashaer\Desktop\basha.html\room2.jpg">
+          <img src="room2.jpg" alt="Room 2" />
+        </a>
+        <h3>Room 2</h3>
+        <p>A space dedicated to realistic art and photography.</p>
+      </div>
+
+      <div class="Room">
+        <a href="C:\Users\Bashaer\Desktop\basha.html\room3.jpg">
+          <img src="room3.jpg" alt="Room 3" />
+        </a>
+        <h3>Room 3</h3>
+        <p>A room filled with experimental and digital art.</p>
+      </div>
+
+    </div>
+
+
+     <!-- زر الرجوع -->
+     <button class="aa" onclick="history.back()">Back</button>
+
+  </body>
+
+</html>
