@@ -70,6 +70,27 @@
 
     </style>
 
+    <script>
+      // Function to save the feedback in local storage and redirect to the home page
+      function handleFormSubmission(event) {
+        event.preventDefault();  // Prevent the form from submitting normally
+
+        // Get form data
+        const name = document.querySelector('input[name="Name"]').value;
+        const email = document.querySelector('input[name="email"]').value;
+        const feedback = document.querySelector('textarea[name="Feedback"]').value;
+
+        // Save to localStorage
+        const feedbackData = { name, email, feedback };
+        localStorage.setItem('userFeedback', JSON.stringify(feedbackData));
+
+        // Redirect to the homepage after 2 seconds
+        setTimeout(function() {
+          window.location.href = "index.html";  // Change this to your homepage URL
+        }, 2000);
+      }
+    </script>
+
   </head>
 
   <body>
@@ -81,13 +102,14 @@
 
         <h2>Share Your Feedback</h2>
 
-        <form action="C:\Users\Bashaer\Desktop\basha.html\index.html">
+        <!-- Use onsubmit event to call handleFormSubmission -->
+        <form onsubmit="handleFormSubmission(event)">
           Your Name:
           <input 
-          type="Text" 
-          name="Name" 
-          placeholder="Enter Your Name" 
-          required 
+            type="Text" 
+            name="Name" 
+            placeholder="Enter Your Name" 
+            required 
           />
           Email Address:
           <input
@@ -109,7 +131,6 @@
 
       </div>
 
-      
   </body>
 
 </html>
